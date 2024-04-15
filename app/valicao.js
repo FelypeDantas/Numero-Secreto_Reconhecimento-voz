@@ -24,7 +24,7 @@ function verificaValorValido(chute){
         `
     } else {
         elementoChute.innerHTML += `
-        <div> o número secreto é menor <i class="fa-duotone fa-arrow-up"></i></div>
+        <div> o número secreto é maior <i class="fa-duotone fa-arrow-up"></i></div>
         `
     }
 }
