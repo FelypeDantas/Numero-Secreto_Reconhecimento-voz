@@ -8,11 +8,15 @@ recognition.start();
 
 recognition.addEventListener('result', onSpeak);
 
-function onSpeak(e){
-    chute = e.results[0][0].transcript;
-    exibeChuteNaTela(chute);
-    verificaValorValido(chute);
+function onSpeak(e) {
+    let chute = e.results[0][0].transcript;
+    const numero = parseInt(chute);
+    if (!Number.isNaN(numero)) {
+        exibeChuteNaTela(numero);
+        verificaValorValido(numero);
+    }
 }
+
 
 function exibeChuteNaTela(chute){
     elementoChute.innerHTML =`
